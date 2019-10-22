@@ -5,6 +5,8 @@ import com.modisa.classdesign.models.advanced.design.abstractcclasses.Shape;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.EnumTest;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterType;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterTypeCapacity;
+import com.modisa.classdesign.models.advanced.design.functionalinterfaces.BlockLambda;
+import com.modisa.classdesign.models.advanced.design.functionalinterfaces.TestLambda;
 import com.modisa.classdesign.models.advanced.design.interfaces.Circle;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.Anonymous;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.InnerNonLocal;
@@ -89,6 +91,22 @@ public class RunApp {
         System.out.println("Interfaces starts here: ");
         Circle circle = new Circle(1,2, 3);
         circle.roll(45);
+        System.out.println("\n");
 
+        //_________________________________________________________________________________________________________________
+
+
+        // Functional Interfaces and Lambda Expression
+
+        System.out.println("Functional Interface starts here");
+        // IntConsumer myL = (int a) -> {Objects.requireNonNull(after); return anotherLambda}
+        TestLambda myLambda = () -> 1 + 2;
+        System.out.println(myLambda.printLambda());
+        BlockLambda blockLambda = (int a) -> {
+            if ((a % 2) == 0) return "Even";
+            return "odd";
+        };
+
+        System.out.println(blockLambda.intKind(12));
     }
 }

@@ -15,16 +15,16 @@ public class EnumTest {
     public void testCapacit() {
         switch (printerTypeCapacity) {
             case LASER:
-                System.out.println("Laser provides best quality 😄");
+                System.out.println("Laser provides best quality -");
                 break;
             case INKJET:
-                System.out.println("Inkjet provides decent quality 😊");
+                System.out.println("Inkjet provides decent quality _");
                 break;
             case DOTMATRIX:
-                System.out.println("DOTMATRIX printers are economical 👏");
+                System.out.println("DOTMATRIX printers are economical -");
                 break;
             default:
-                System.out.println("🤙😄😊😒");
+                System.out.println("-");
         }
         System.out.println("Print page capacity per minute: " + printerTypeCapacity.getPagePrintCapacity());
     }
