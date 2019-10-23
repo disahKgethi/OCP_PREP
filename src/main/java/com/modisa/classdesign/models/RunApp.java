@@ -2,6 +2,7 @@ package com.modisa.classdesign.models;
 
 import com.modisa.classdesign.models.advanced.design.abstractcclasses.Rectangle;
 import com.modisa.classdesign.models.advanced.design.abstractcclasses.Shape;
+import com.modisa.classdesign.models.advanced.design.anonymousinnerclasses.TestAnonymous;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.EnumTest;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterType;
 import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterTypeCapacity;
@@ -108,5 +109,19 @@ public class RunApp {
         };
 
         System.out.println(blockLambda.intKind(12));
+
+        //_________________________________________________________________________________________________________________
+
+
+        // Anonymous Inner Classes
+
+        System.out.println("Anonymous Inner Classes starts here");
+        TestAnonymous testAnonymous = new TestAnonymous(){
+            public void printAnonymous() {
+                System.out.println("Print from inner class");
+            }
+        };
+
+        testAnonymous.printAnonymous();
     }
 }
