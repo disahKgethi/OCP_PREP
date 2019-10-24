@@ -19,6 +19,7 @@ import com.modisa.classdesign.models.genericsandcollections.genericclasses.BoxPr
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.Pair;
 import com.modisa.classdesign.models.genericsandcollections.genericmethods.Utilities;
 import com.modisa.classdesign.models.genericsandcollections.genericsubtyping.TestPurpose;
+import com.modisa.classdesign.models.genericsandcollections.mapinterface.NavigableMapTest;
 import com.modisa.classdesign.models.genericsandcollections.rawtype.RawTest;
 
 public class RunApp {
@@ -58,6 +59,10 @@ public class RunApp {
 
         TreeSets treeSets = new TreeSets();
         treeSets.treeSet();
+
+        // Map Interface
+        NavigableMapTest navigableMapTest = new NavigableMapTest();
+        navigableMapTest.navigateMapTest();
 
         //
     }
