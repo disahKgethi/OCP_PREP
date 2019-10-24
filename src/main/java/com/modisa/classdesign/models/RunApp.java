@@ -15,6 +15,7 @@ import com.modisa.classdesign.models.advanced.design.nestedclasses.LocalInner;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.StaticNonLocal;
 import com.modisa.classdesign.models.genericsandcollections.collectionclasses.CollectionClass;
 import com.modisa.classdesign.models.genericsandcollections.collectionclasses.TreeSets;
+import com.modisa.classdesign.models.genericsandcollections.comparable.Student;
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.BoxPrinter;
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.Pair;
 import com.modisa.classdesign.models.genericsandcollections.genericmethods.Utilities;
@@ -22,6 +23,8 @@ import com.modisa.classdesign.models.genericsandcollections.genericsubtyping.Tes
 import com.modisa.classdesign.models.genericsandcollections.mapinterface.NavigableMapTest;
 import com.modisa.classdesign.models.genericsandcollections.queueing.SplQueue;
 import com.modisa.classdesign.models.genericsandcollections.rawtype.RawTest;
+
+import java.util.Arrays;
 
 public class RunApp {
     public static void main(String[] args) {
@@ -68,5 +71,21 @@ public class RunApp {
         // The Deque Interface and ArrayDeque class
         SplQueue splQueue = new SplQueue();
         splQueue.testHere();
+
+        //Comparable and Comparator Interfaces
+        Student student[] = {new Student("211365102", "Modisa", 3.1),
+                                new Student("211365103", "Malusi", 3.4),
+                                new Student("211365104", "Phomolo", 2.7),
+                                new Student("211365105", "Sphelele", 3.7)};
+
+        System.out.println("Before sorting by student ID");
+        System.out.println("Student-ID \t Name \t CGPA (for 4.0)");
+        System.out.println(Arrays.toString(student));
+
+        Arrays.sort(student);
+
+        System.out.println("After sorting by student ID");
+        System.out.println("Student-ID \t Name \t CGPA (for 4.0)");
+        System.out.println(Arrays.toString(student));
     }
 }
