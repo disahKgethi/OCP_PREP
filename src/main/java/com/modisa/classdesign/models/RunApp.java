@@ -16,6 +16,7 @@ import com.modisa.classdesign.models.advanced.design.nestedclasses.StaticNonLoca
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.BoxPrinter;
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.Pair;
 import com.modisa.classdesign.models.genericsandcollections.genericmethods.Utilities;
+import com.modisa.classdesign.models.genericsandcollections.genericsubtyping.TestPurpose;
 import com.modisa.classdesign.models.genericsandcollections.rawtype.RawTest;
 
 public class RunApp {
@@ -44,5 +45,9 @@ public class RunApp {
         // Generic Methods
         Utilities utilities = new Utilities();
         utilities.testFill();
+
+        // Generic Subtyping and Wildcard Parameters
+        TestPurpose testPurpose = new TestPurpose();
+        testPurpose.fillList();
     }
 }
