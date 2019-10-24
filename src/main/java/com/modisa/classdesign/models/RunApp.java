@@ -13,6 +13,8 @@ import com.modisa.classdesign.models.advanced.design.nestedclasses.Anonymous;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.InnerNonLocal;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.LocalInner;
 import com.modisa.classdesign.models.advanced.design.nestedclasses.StaticNonLocal;
+import com.modisa.classdesign.models.genericsandcollections.collectionclasses.CollectionClass;
+import com.modisa.classdesign.models.genericsandcollections.collectionclasses.TreeSets;
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.BoxPrinter;
 import com.modisa.classdesign.models.genericsandcollections.genericclasses.Pair;
 import com.modisa.classdesign.models.genericsandcollections.genericmethods.Utilities;
@@ -49,5 +51,14 @@ public class RunApp {
         // Generic Subtyping and Wildcard Parameters
         TestPurpose testPurpose = new TestPurpose();
         testPurpose.fillList();
+
+        // Collection Classes [Abstract Classes and Interface]
+        CollectionClass collectionClass = new CollectionClass();
+        collectionClass.collClass();
+
+        TreeSets treeSets = new TreeSets();
+        treeSets.treeSet();
+
+        //
     }
 }
