@@ -2,11 +2,13 @@ package com.modisa.classdesign.models;
 
 import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.predicate_interface.PredicateInterface;
 import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.consumer_interface.ConsumerInterface;
+import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.supplier_interface.SupplierInterface;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class RunApp {
     public static void main(String[] args) {
@@ -54,5 +56,11 @@ public class RunApp {
                It return Object passed
         */
         System.out.println("Supplier Interfaces starts her:");
+        SupplierInterface supplierInterface = new SupplierInterface();
+        System.out.println(supplierInterface.get());
+        Supplier<String> stringSupplier = () -> {
+          return "There is no input but is expected to return something";
+        };
+        System.out.println(stringSupplier.get());
     }
 }
