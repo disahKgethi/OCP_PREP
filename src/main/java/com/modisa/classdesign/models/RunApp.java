@@ -1,34 +1,12 @@
 package com.modisa.classdesign.models;
 
-import com.modisa.classdesign.models.advanced.design.abstractcclasses.Rectangle;
-import com.modisa.classdesign.models.advanced.design.abstractcclasses.Shape;
-import com.modisa.classdesign.models.advanced.design.anonymousinnerclasses.TestAnonymous;
-import com.modisa.classdesign.models.advanced.design.enumdata.type.EnumTest;
-import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterType;
-import com.modisa.classdesign.models.advanced.design.enumdata.type.PrinterTypeCapacity;
-import com.modisa.classdesign.models.advanced.design.functionalinterfaces.BlockLambda;
-import com.modisa.classdesign.models.advanced.design.functionalinterfaces.TestLambda;
-import com.modisa.classdesign.models.advanced.design.interfaces.Circle;
-import com.modisa.classdesign.models.advanced.design.nestedclasses.Anonymous;
-import com.modisa.classdesign.models.advanced.design.nestedclasses.InnerNonLocal;
-import com.modisa.classdesign.models.advanced.design.nestedclasses.LocalInner;
-import com.modisa.classdesign.models.advanced.design.nestedclasses.StaticNonLocal;
-import com.modisa.classdesign.models.genericsandcollections.collectionclasses.CollectionClass;
-import com.modisa.classdesign.models.genericsandcollections.collectionclasses.TreeSets;
-import com.modisa.classdesign.models.genericsandcollections.comparable.Student;
-import com.modisa.classdesign.models.genericsandcollections.genericclasses.BoxPrinter;
-import com.modisa.classdesign.models.genericsandcollections.genericclasses.Pair;
-import com.modisa.classdesign.models.genericsandcollections.genericmethods.Utilities;
-import com.modisa.classdesign.models.genericsandcollections.genericsubtyping.TestPurpose;
-import com.modisa.classdesign.models.genericsandcollections.mapinterface.NavigableMapTest;
-import com.modisa.classdesign.models.genericsandcollections.queueing.SplQueue;
-import com.modisa.classdesign.models.genericsandcollections.rawtype.RawTest;
-import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.PredicateInterface;
+import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.predicate_interface.PredicateInterface;
 import com.modisa.classdesign.models.lambda_builtin_functional_interfaces.consumer_interface.ConsumerInterface;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class RunApp {
     public static void main(String[] args) {
@@ -41,9 +19,12 @@ public class RunApp {
                It is used for conditional check
                So it returns a boolean
         */
-        System.out.println("Predicate Interfaces starts her:");
+        System.out.println("Predicate Interfaces starts here:");
         PredicateInterface predicateInterface = new PredicateInterface();
-        predicateInterface.testPredicate();
+
+        Predicate<String> predicate = string -> string == "Predicates";
+        System.out.println(predicate.test("Predicate"));
+        //predicateInterface.testPredicate();
         //______________________________________________________________________________________________________________
 
 
@@ -73,6 +54,5 @@ public class RunApp {
                It return Object passed
         */
         System.out.println("Supplier Interfaces starts her:");
-
     }
 }
